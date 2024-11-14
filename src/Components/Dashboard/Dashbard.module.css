@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* Dashboard.module.css */
+.dashboard {
+    width: 80%;
+    padding: 2rem;
+  }
+  
+  .header {
+  
+    margin-bottom: 2rem;
+  }
+  .dashboards{
+    margin-right: 70px;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+ 
+  }
+  
+  .cards {
+  border: 2px solid rebeccapurple;
+
+  background-color: #f5f5f5;
+  width: 50%;
+  height: 70vh;
+    box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2);
+  }
+/* Dashboard.module.css */
+
+.chartSection { flex: 1;
+  height: 70vh;
+  width: 50%;
+  border: 2px solid rebeccapurple;
+  
+  box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2); /* Stronger shadow */
+}
+
+ 
+  
+    

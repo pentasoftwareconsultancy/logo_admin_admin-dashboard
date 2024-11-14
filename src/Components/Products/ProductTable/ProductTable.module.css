@@ -1,0 +1,100 @@
+.productTableContainer {
+    padding: 20px;
+    background-color: #2d3e50;
+    color: #ffffff;
+    border-radius: 8px;
+    width: fit-content;
+  }
+  
+  .scrollableTable {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #3a4b5c;
+  }
+  
+  .productTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .productTable th, .productTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #3a4b5c;
+  }
+  
+  .buttonsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .addButton, .deleteSelectedButton {
+    background-color: #f9a826;
+    color: #2d3e50;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popupContent {
+    background: #2d3e50;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popupContent h3 {
+    margin-top: 0;
+    color: #f9a826;
+  }
+  
+  .popupContent label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .popupContent input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #3a4b5c;
+    border-radius: 4px;
+    background-color: #3a4b5c;
+    color: white;
+  }
+  
+  .popupButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .popupButtons button {
+    background-color: #f9a826;
+    color: #2d3e50;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
