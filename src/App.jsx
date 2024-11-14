@@ -1,9 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './Components/Sidebar/Sidebar'
-
-
-
 import Product from './Page/Product/Product';
 import Dashboard from './Components/Dashboard/Dashbard';
 import './App.css'

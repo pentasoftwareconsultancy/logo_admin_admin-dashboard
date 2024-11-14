@@ -1,20 +1,33 @@
 // Sidebar.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Sidebar.module.css';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
+
+    const [darkMode, setDarkMode] = useState(false);
+  
+    const toggleDarkMode = () => {
+      setDarkMode(!darkMode);
+    };
   return (
-    <div className={styles.sidebar}>
-     <Link to='/home'> <h2 className={styles.logo}>FinSet</h2></Link>
+    <div className={`${styles.sidebar} ${darkMode ? styles.dark : ''}`}>
+      <div className={styles.header}>
+        <Link to='/home'>
+          <h2 className={styles.logo}>FinSet</h2>
+        </Link>
+        <button className={styles.toggleButton} onClick={toggleDarkMode}>
+          {darkMode ? '☀️' : '🌙'}
+        </button>
+      </div>
       <ul className={styles.menu}>
-       <Link to='/dashboard'> <li className={styles.menuItem}>Dashboard</li></Link>
-        <li className={styles.menuItem}>Report</li>
-       <Link to='/products'> <li className={styles.menuItem}>Products</li></Link>
-        <li className={styles.menuItem}>Account</li>
-        <li className={styles.menuItem}>Logout</li>
+       <Link to='/dashboard'> <li className={`${styles.menuItem} ${styles.active}`}>Dashboard</li></Link>
+        <li className={`${styles.menuItem} ${styles.active}`}>Report</li>
+       <Link to='/products'> <li className={`${styles.menuItem} ${styles.active}`}>Products</li></Link>
+        <li className={`${styles.menuItem} ${styles.active}`}>Account</li>
+        <li className={`${styles.menuItem} ${styles.active}`}>Logout</li>
         <li className={`${styles.menuItem} ${styles.active}`}>Analytics</li>
-        <li className={styles.menuItem}>Settings</li>
+        <li className={`${styles.menuItem} ${styles.active}`}>Settings</li>
       </ul>
     </div>
   );

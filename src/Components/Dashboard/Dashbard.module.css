@@ -1,44 +1,109 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Dashboard.module.css */
+
+/* Dashboard Styles */
 .dashboard {
-    width: 80%;
-    padding: 2rem;
-  }
-  
-  .header {
-  
-    margin-bottom: 2rem;
-  }
-  .dashboards{
-    margin-right: 70px;
-    width: 100%;
-    display: flex;
-    gap: 1rem;
- 
-  }
-  
-  .cards {
-  border: 2px solid rebeccapurple;
-
-  background-color: #f5f5f5;
-  width: 50%;
-  height: 70vh;
-    box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2);
-  }
-/* Dashboard.module.css */
-
-.chartSection { flex: 1;
-  height: 70vh;
-  width: 50%;
-  border: 2px solid rebeccapurple;
-  
-  box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2); /* Stronger shadow */
+  margin-left: 350px;
+  width: 75%;
+  padding: 2rem;
 }
 
- 
-  
-    
+/* Header Section */
+.header {
+  margin-bottom: 2rem;
+}
+
+/* Dashboards container */
+.dashboards {
+  margin-right: 70px;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+/* Cards Styling */
+.cards {
+  border: 2px solid rebeccapurple;
+  background-color: #f5f5f5;
+  width: 48%; /* Adjust width to accommodate for smaller screens */
+  height: 69vh;
+  box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2);
+}
+
+/* Chart Section Styling */
+.chartSection {
+  flex: 1;
+  height: 70vh;
+  width: 48%; /* Adjust width to accommodate for smaller screens */
+  border: 2px solid rebeccapurple;
+  box-shadow: 0 8px 16px rgba(190, 35, 161, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (desktop) */
+@media (min-width: 1024px) {
+  .dashboard {
+      margin-left: 350px;
+      width: 75%;
+  }
+
+  .cards {
+      width: 48%; /* Keep the card width at 48% for desktop */
+  }
+
+  .chartSection {
+      width: 48%; /* Keep the chart width at 48% for desktop */
+  }
+}
+
+/* For tablet screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .dashboard {
+      margin-left: 20px;
+      width: 90%;
+  }
+
+  .dashboards {
+      gap: 0.8rem;
+  }
+
+  .cards, .chartSection {
+      width: 100%; /* Full width for smaller screen sizes */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .dashboard {
+      margin-left: 0;
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .dashboards {
+      flex-direction: column; /* Stack the items vertically */
+      gap: 1rem;
+  }
+
+  .cards, .chartSection {
+      width: 100%; /* Full width for mobile screens */
+      height: auto; /* Remove fixed height */
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .dashboard {
+      padding: 0.5rem;
+  }
+
+  .cards, .chartSection {
+      height: auto; /* Remove height for small screens */
+  }
+}

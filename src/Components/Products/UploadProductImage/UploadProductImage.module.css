@@ -1,0 +1,110 @@
+/* Upload Container */
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px; /* Limit max width on larger screens */
+  margin: 0 auto;
+}
+
+/* Image Preview */
+.imagePreview {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ccc;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Preview Image */
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Upload Icon */
+.uploadIcon {
+  font-size: 2rem;
+  color: #777;
+}
+
+/* File Input (Hidden) */
+.fileInput {
+  display: none;
+}
+
+/* Upload Button */
+.uploadButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For large screens (Desktops and tablets above 768px) */
+@media (min-width: 768px) {
+  .uploadContainer {
+    width: 60%; /* Allow container to take up more space on larger screens */
+    max-width: 500px; /* Maximum width for large screens */
+  }
+
+  .imagePreview {
+    width: 200px; /* Larger preview image on bigger screens */
+    height: 200px;
+  }
+
+  .uploadButton {
+    font-size: 1.1rem; /* Slightly larger button on bigger screens */
+  }
+}
+
+/* For smaller screens (Tablets and mobile phones) */
+@media (max-width: 767px) {
+  .uploadContainer {
+    width: 90%; /* Use more of the screen on mobile devices */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .imagePreview {
+    width: 120px; /* Smaller preview image on mobile */
+    height: 120px;
+  }
+
+  .uploadButton {
+    width: 100%; /* Make button full width for easier tapping */
+    font-size: 1rem; /* Make button text size smaller */
+  }
+
+  .uploadIcon {
+    font-size: 1.5rem; /* Slightly smaller upload icon on mobile */
+  }
+}
+
+/* For extra small screens (Portrait mobile devices) */
+@media (max-width: 480px) {
+  .uploadContainer {
+    width: 95%; /* Use almost full screen width */
+    padding: 8px; /* Less padding for very small screens */
+  }
+
+  .imagePreview {
+    width: 100px; /* Even smaller preview image on very small screens */
+    height: 100px;
+  }
+
+  .uploadButton {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
+  }
+}

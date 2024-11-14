@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ProductTable.module.css';
+import UploadProductImage from '../UploadProductImage/UploadProductImage';
 
 const ProductTable = () => {
   // State to hold the products data
@@ -107,6 +108,7 @@ const ProductTable = () => {
         <div className={styles.popup}>
           <div className={styles.popupContent}>
             <h3>Add New Product</h3>
+            <UploadProductImage/>
             <label>
               Product Name:
               <input

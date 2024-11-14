@@ -2,6 +2,7 @@
 import React from 'react';
 import LineChart from './LineChart/LineChart';
 import NotificationList from './NotificationList/NotificationList';
+import LineChart2 from './LineChart2/LineChart2';
 import styles from '../Dashboard/Dashbard.module.css';
 
 function Dashboard() {
@@ -14,6 +15,7 @@ function Dashboard() {
       <div className={styles.dashboards}>
        <div className={styles.chartSection}>
        <LineChart />
+       <LineChart2/>
 
      </div>
      <header className={styles.header}>

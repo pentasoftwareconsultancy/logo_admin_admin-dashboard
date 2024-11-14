@@ -1,8 +1,40 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.d{
+
+.d {
+    margin: 15px;
+    margin-left: 10%; /* Adjust the left margin based on viewport width */
+    gap: 1rem; /* Use rem or rem units for responsive gap */
     display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
+    justify-content: flex-start; /* Align items at the start */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (desktops and above) */
+@media (min-width: 1200px) {
+    .d {
+        margin-left: 20%; /* More margin on larger screens */
+    }
+}
+
+/* For medium screens (tablets, medium devices) */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .d {
+        margin-left: 15%; /* Less margin for medium-sized devices */
+        gap: 1.5rem; /* Increase the gap slightly */
+    }
+}
+
+/* For smaller screens (mobile phones) */
+@media (max-width: 768px) {
+    .d {
+        margin-left: 0; /* No left margin on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.5rem; /* Adjust gap for smaller screens */
+    }
 }

@@ -1,18 +1,20 @@
 /* Sidebar.module.css */
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 .sidebar {
-  /* border: 2px solid rebeccapurple; */
   border-radius: 15px;
   margin: 1rem;
   box-shadow: #333;
   width: 20%;
   height: 95vh;
+  position: fixed;
   padding: 1rem;
   background-color: #f5f5f5;
+  transition: width 0.3s ease; /* Smooth transition for resizing */
 }
 
 .logo {
@@ -32,8 +34,74 @@
 }
 
 .active {
-  color: white;
-  background-color: rebeccapurple;
+  color: rebeccapurple;
+  background-color: white;
   padding: 0.5rem;
   border-radius: 8px;
+}
+
+.active:hover {
+  color: rgb(247, 245, 248);
+  background-color: rebeccapurple;
+}
+
+.dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.dark .menuItem:hover,
+.dark .active {
+  background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (desktop) */
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 20%;
+  }
+}
+
+/* For tablet screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .sidebar {
+    width: 25%;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    padding: 1rem;
+    box-shadow: none; /* Remove shadow on small screens */
+  }
+
+  .menuItem {
+    margin: 0.8rem 0;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .menuItem {
+    margin: 0.5rem 0;
+  }
 }

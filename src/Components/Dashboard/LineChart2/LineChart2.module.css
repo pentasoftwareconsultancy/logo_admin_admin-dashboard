@@ -1,0 +1,22 @@
+.df {
+    margin-top: 50%;  /* Push the element down by 50% of the parent container height */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .df {
+        margin-top: 40%;  /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .df {
+        margin-top: 30%;  /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .df {
+        margin-top: 20%;  /* Adjust for mobile phones */
+    }
+}

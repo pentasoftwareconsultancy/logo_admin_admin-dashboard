@@ -1,99 +1,180 @@
+/* Categories Container */
 .categoriesContainer {
-    padding: 20px;
-    background-color: #2d3e50;
-    color: #ffffff;
-    border-radius: 8px;
-    width: fit-content;
+  padding: 20px;
+  background-color: #2d3e50;
+  color: #ffffff;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 100%; /* Ensure it scales on smaller screens */
+}
+
+/* Categories List */
+.categoriesList {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Category Item */
+.categoryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #3a4b5c;
+}
+
+/* Add Button */
+.addButton {
+  background-color: #f9a826;
+  color: #2d3e50;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Delete Button */
+.deleteButton {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Content */
+.popupContent {
+  background: #2d3e50;
+  color: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Heading */
+.popupContent h3 {
+  margin-top: 0;
+  color: #f9a826;
+}
+
+/* Popup Labels and Inputs */
+.popupContent label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.popupContent input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #3a4b5c;
+  border-radius: 4px;
+  background-color: #3a4b5c;
+  color: white;
+}
+
+/* Popup Buttons */
+.popupButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.popupButtons button {
+  background-color: #f9a826;
+  color: #2d3e50;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For large screens (Desktops and tablets above 768px) */
+@media (min-width: 768px) {
+  .categoriesContainer {
+    max-width: 80%; /* Limit container width on larger screens */
   }
-  
-  .categoriesList {
-    max-height: 400px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-  }
-  
-  .categoryItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    border-bottom: 1px solid #3a4b5c;
-  }
-  
-  .addButton {
-    background-color: #f9a826;
-    color: #2d3e50;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .deleteButton {
-    background: none;
-    border: none;
-    color: #ff6b6b;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
+
   .popupContent {
-    background: #2d3e50;
-    color: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Make popup content wider on larger screens */
   }
-  
-  .popupContent h3 {
-    margin-top: 0;
-    color: #f9a826;
+
+  .addButton {
+    font-size: 1.1rem; /* Slightly larger font size on larger screens */
   }
-  
-  .popupContent label {
-    display: block;
-    margin-bottom: 8px;
+
+  .categoryItem {
+    font-size: 1.1rem; /* Slightly larger text in category items */
   }
-  
-  .popupContent input {
-    width: 100%;
+}
+
+/* For smaller screens (Tablets and mobile phones) */
+@media (max-width: 767px) {
+  .categoriesContainer {
+    width: 90%; /* Use more of the screen on mobile devices */
+    padding: 15px; /* Add padding for better spacing */
+    margin: 0 auto;
+  }
+
+  .popupContent {
+    width: 90%; /* Popup takes up more space on small screens */
+  }
+
+  .addButton {
+    font-size: 1rem; /* Button text size adjustment for mobile */
+  }
+
+  .categoryItem {
+    flex-direction: column; /* Stack category items vertically */
+    padding: 10px;
+  }
+
+  .categoryItem span {
+    font-size: 0.9rem; /* Smaller text size for category items */
+  }
+}
+
+/* For extra small screens (Portrait mobile devices) */
+@media (max-width: 480px) {
+  .categoriesContainer {
+    width: 95%; /* Full width for extra small screens */
+  }
+
+  .popupContent {
+    width: 95%; /* Popup content adjusted for very small screens */
+  }
+
+  .addButton {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
+  }
+
+  .categoryItem {
+    flex-direction: column; /* Keep items stacked vertically */
     padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #3a4b5c;
-    border-radius: 4px;
-    background-color: #3a4b5c;
-    color: white;
   }
-  
-  .popupButtons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 20px;
+
+  .categoryItem span {
+    font-size: 0.85rem; /* Smaller text for very small screens */
   }
-  
-  .popupButtons button {
-    background-color: #f9a826;
-    color: #2d3e50;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  
+}

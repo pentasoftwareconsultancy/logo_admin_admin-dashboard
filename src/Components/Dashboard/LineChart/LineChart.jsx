@@ -60,6 +60,7 @@ function LineChart() {
   };
 
   return (
+    
     <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}>
       {/* Timeframe selection menu */}
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
