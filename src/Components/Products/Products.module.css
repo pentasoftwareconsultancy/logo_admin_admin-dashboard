@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
-.d {
-    margin: 15px;
-    margin-left: 10%; /* Adjust the left margin based on viewport width */
-    gap: 1rem; /* Use rem or rem units for responsive gap */
+.maincantainer {
+width: 100%;
+    margin: 20px;
+    margin-left: 40%; /* Adjust the left margin based on viewport width */
+     /* Use rem or rem units for responsive gap */
+    display: grid;
     display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
-    justify-content: flex-start; /* Align items at the start */
+ 
+    grid-column: 2fr;
+
+    
 }
 
 /* Media Queries for Responsiveness */

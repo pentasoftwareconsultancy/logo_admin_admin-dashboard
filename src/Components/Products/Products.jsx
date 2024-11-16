@@ -5,8 +5,7 @@ import styles from './Products.module.css';
 function Products() {
   return (
 <>
-<div className={styles.d}>
-
+<div className={styles.maincantainer}>
 <ProductTable/>
 <ProductCategories/>
 </div>

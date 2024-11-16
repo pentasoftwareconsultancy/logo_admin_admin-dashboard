@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar/Sidebar'
 import Product from './Page/Product/Product';
 import Dashboard from './Components/Dashboard/Dashbard';
 import './App.css'
+import Accounts from './Page/Accounts/Accounts';
 
 
 
@@ -23,7 +24,7 @@ function App() {
          
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/products" element={<Product/>} />
-      
+      <Route path='/account' element={<Accounts/>}/>
       </Routes>
     </BrowserRouter>
     </div>

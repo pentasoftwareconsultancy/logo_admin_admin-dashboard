@@ -4,8 +4,8 @@
   background-color: #2d3e50;
   color: #ffffff;
   border-radius: 8px;
-  width: fit-content;
-  max-width: 100%; /* Ensure it scales on smaller screens */
+margin-left: 20px;
+  width: 30%; /* Ensure it scales on smaller screens */
 }
 
 /* Categories List */
